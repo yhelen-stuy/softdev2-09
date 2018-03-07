@@ -14,6 +14,7 @@ var drawCircle = function(x, y) {
     circle.setAttribute("stroke", "black");
 
     pic.appendChild(circle);
+    circle.addEventListener("click", change)
 }
 
 var change = function(e) {
@@ -40,7 +41,6 @@ var draw = function(e) {
 var circleChangeListeners = function() {
     cs = document.getElementsByTagName("circle");
     for (i = 0; i < cs.length; i++) {
-        cs[i].addEventListener("click", change)
     }
 }
 
